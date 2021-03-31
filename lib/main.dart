@@ -36,14 +36,15 @@ class _HomePageState extends State<HomePage> {
     var routeList = router.keys.toList();
     return Scaffold(
       appBar: AppBar(
-        title: Container(
-          child: Text(
-            widget.title,
-            style: TextStyle(color: Colors.white),
-          ),
-          alignment: Alignment.center,
-        ),
-        elevation: 0.5,
+        // title: Container(
+        //   child: Text(
+        //     widget.title,
+        //     style: TextStyle(color: Colors.white),
+        //   ),
+        //   alignment: Alignment.center,
+        // ),
+        title: Text(widget.title),
+        elevation: 0,
         backgroundColor: Colors.red,
       ),
       body: Container(
@@ -69,5 +70,5 @@ class _HomePageState extends State<HomePage> {
 }
 
 Map<String, WidgetBuilder> router = {
-  "文本输入框简单的 Controller": (context) => new ControllerDemoPage(),
+  "文本输入 Controller": (context) => new ControllerDemoPage(),
 };
