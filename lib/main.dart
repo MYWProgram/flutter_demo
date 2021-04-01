@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/widget/controller_demo_page.dart';
+import 'package:flutter_demo/widget/clip_demo_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -36,14 +37,13 @@ class _HomePageState extends State<HomePage> {
     var routeList = router.keys.toList();
     return Scaffold(
       appBar: AppBar(
-        // title: Container(
-        //   child: Text(
-        //     widget.title,
-        //     style: TextStyle(color: Colors.white),
-        //   ),
-        //   alignment: Alignment.center,
-        // ),
-        title: Text(widget.title),
+        title: Container(
+          child: Text(
+            widget.title,
+            style: TextStyle(color: Colors.white),
+          ),
+          alignment: Alignment.center,
+        ),
         elevation: 0,
         backgroundColor: Colors.red,
       ),
@@ -70,5 +70,6 @@ class _HomePageState extends State<HomePage> {
 }
 
 Map<String, WidgetBuilder> router = {
-  "文本输入 Controller": (context) => new ControllerDemoPage(),
+  '输入框 Controller': (context) => new ControllerDemoPage(),
+  '控件圆角组合': (context) => new ClipDemoPage(),
 };
