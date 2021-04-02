@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ClipDemoPage extends StatelessWidget {
+class Clip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Container(
           child: Text(
-            'ClipDemoPage',
+            'Clip',
             style: TextStyle(color: Colors.white),
           ),
-          alignment: Alignment.center,
         ),
         elevation: 0,
         backgroundColor: Colors.red,

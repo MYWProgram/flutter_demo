@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/widget/controller_demo_page.dart';
-import 'package:flutter_demo/widget/clip_demo_page.dart';
+import 'package:flutter_demo/widget/text_field_controller.dart';
+import 'package:flutter_demo/widget/clip.dart';
+import 'package:flutter_demo/widget/scroller_listener.dart';
 
 void main() {
   runApp(MyApp());
@@ -51,7 +52,6 @@ class _HomePageState extends State<HomePage> {
         child: ListView.builder(
           itemBuilder: (context, index) {
             return new InkWell(
-              onTap: () => Navigator.of(context).pushNamed(routeList[index]),
               child: Card(
                 child: Container(
                   alignment: Alignment.centerLeft,
@@ -60,6 +60,7 @@ class _HomePageState extends State<HomePage> {
                   child: Text(router.keys.toList()[index]),
                 ),
               ),
+              onTap: () => Navigator.of(context).pushNamed(routeList[index]),
             );
           },
           itemCount: router.length,
@@ -70,6 +71,7 @@ class _HomePageState extends State<HomePage> {
 }
 
 Map<String, WidgetBuilder> router = {
-  '输入框 Controller': (context) => new ControllerDemoPage(),
-  '控件圆角组合': (context) => new ClipDemoPage(),
+  '输入框 Controller': (context) => new TextFieldController(),
+  '控件圆角组合': (context) => new Clip(),
+  '列表滑动监听': (context) => new ScrollerListener(),
 };

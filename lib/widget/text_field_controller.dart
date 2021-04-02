@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ControllerDemoPage extends StatelessWidget {
+class TextFieldController extends StatelessWidget {
   final TextEditingController controller =
       new TextEditingController(text: '初始文本');
 
@@ -19,13 +19,7 @@ class ControllerDemoPage extends StatelessWidget {
     );
     return Scaffold(
       appBar: AppBar(
-        title: Container(
-          child: Text(
-            'ControllerDemoPage',
-            style: TextStyle(color: Colors.white),
-          ),
-          alignment: Alignment.center,
-        ),
+        title: Text('TextFieldController'),
         elevation: 0,
         backgroundColor: Colors.red,
       ),
