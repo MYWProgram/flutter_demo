@@ -30,6 +30,7 @@ class _ScrollerListenerState extends State<ScrollerListener> {
     return Scaffold(
       appBar: AppBar(
         title: Text('ScrollerListener'),
+        elevation: 0,
         backgroundColor: Colors.red,
       ),
       body: Container(
@@ -76,7 +77,7 @@ class _ScrollerListenerState extends State<ScrollerListener> {
       ),
       persistentFooterButtons: <Widget>[
         Text('距离顶部: ${offset.floor()}'),
-        Text('当前行为: $notify'),
+        Text('当前状态: $notify'),
         Visibility(
           visible: isTop,
           child: Text(
@@ -92,7 +93,8 @@ class _ScrollerListenerState extends State<ScrollerListener> {
           ),
         ),
         ElevatedButton(
-          child: Text('返回顶部'),
+          child: Icon(Icons.arrow_upward),
+          // * 两种修改自带 Button 样式的方法。
           style: ElevatedButton.styleFrom(primary: Colors.red),
           // style: ButtonStyle(backgroundColor: MaterialStateProperty.resolveWith((states) => Colors.red)),
           onPressed: () => _scrollController.animateTo(0, duration: Duration(seconds: 1), curve: Curves.bounceInOut),
