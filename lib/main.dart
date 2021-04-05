@@ -3,6 +3,7 @@ import 'package:flutter_demo/widget/text_field_controller.dart';
 import 'package:flutter_demo/widget/clip.dart';
 import 'package:flutter_demo/widget/scroller_listener.dart';
 import 'package:flutter_demo/widget/scroll_to_index.dart';
+import 'package:flutter_demo/widget/scroll_to_index2.dart';
 
 void main() {
   runApp(MyApp());
@@ -76,4 +77,5 @@ Map<String, WidgetBuilder> router = {
   '控件圆角组合': (context) => new Clip(),
   '列表滑动监听': (context) => new ScrollerListener(),
   '滚动到指定位置': (context) => new ScrollToIndex(),
+  '滚动到指定位置2': (context) => new ScrollToIndex2(),
 };
