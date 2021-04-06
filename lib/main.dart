@@ -4,6 +4,7 @@ import 'package:flutter_demo/widget/clip.dart';
 import 'package:flutter_demo/widget/scroller_listener.dart';
 import 'package:flutter_demo/widget/scroll_to_index.dart';
 import 'package:flutter_demo/widget/scroll_to_index2.dart';
+import 'package:flutter_demo/widget/show_transform.dart';
 
 void main() {
   runApp(MyApp());
@@ -78,4 +79,5 @@ Map<String, WidgetBuilder> router = {
   '列表滑动监听': (context) => new ScrollerListener(),
   '滚动到指定位置': (context) => new ScrollToIndex(),
   '滚动到指定位置2': (context) => new ScrollToIndex2(),
+  'transform 展示效果': (context) => new ShowTransform(),
 };
