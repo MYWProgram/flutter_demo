@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/widget/clip.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:flutter_demo/widget/scroller_listener.dart';
-import 'package:flutter_demo/widget/scroll_to_index.dart';
-import 'package:flutter_demo/widget/scroll_to_index2.dart';
-import 'package:flutter_demo/widget/show_transform.dart';
+import 'package:flutter_demo/widget/login_check.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,15 +11,18 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePage(
+    return ScreenUtilInit(
+      designSize: Size(375, 667),
+      builder: () => MaterialApp(
         title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: HomePage(
+          title: 'Flutter Demo',
+        ),
+        routes: router,
       ),
-      routes: router,
     );
   }
 }
@@ -57,8 +59,8 @@ class _HomePageState extends State<HomePage> {
               child: Card(
                 child: Container(
                   alignment: Alignment.centerLeft,
-                  margin: EdgeInsets.symmetric(horizontal: 10),
-                  height: 50,
+                  margin: EdgeInsets.symmetric(horizontal: 10.h),
+                  height: 36.h,
                   child: Text(router.keys.toList()[index]),
                 ),
               ),
@@ -73,9 +75,6 @@ class _HomePageState extends State<HomePage> {
 }
 
 Map<String, WidgetBuilder> router = {
-  '控件圆角组合': (context) => new Clip(),
   '列表滑动监听': (context) => new ScrollerListener(),
-  '滚动到指定位置': (context) => new ScrollToIndex(),
-  '滚动到指定位置2': (context) => new ScrollToIndex2(),
-  'transform 展示效果': (context) => new ShowTransform(),
+  '登陆校验': (context) => new LoginCheck(),
 };

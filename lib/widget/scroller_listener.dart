@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ScrollerListener extends StatefulWidget {
   @override
@@ -66,8 +67,8 @@ class _ScrollerListenerState extends State<ScrollerListener> {
                 child: Container(
                   child: Text('Item $index'),
                   alignment: Alignment.centerLeft,
-                  height: 60,
-                  margin: EdgeInsets.symmetric(horizontal: 10),
+                  height: 36.h,
+                  margin: EdgeInsets.symmetric(horizontal: 10.h),
                 ),
               );
             },
