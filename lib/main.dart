@@ -22,6 +22,8 @@ class MyApp extends StatelessWidget {
           title: 'Flutter Demo',
         ),
         routes: router,
+        // * 不显示 debug 标签
+        debugShowCheckedModeBanner: false,
       ),
     );
   }
