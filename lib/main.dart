@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_demo/widget/scroller_listener.dart';
 import 'package:flutter_demo/widget/login_check.dart';
 import 'package:flutter_demo/widget/float_up/float_up.dart';
+import 'package:flutter_demo/widget/third_part_login.dart';
 
 void main() {
   runApp(MyApp());
@@ -81,4 +82,5 @@ Map<String, WidgetBuilder> router = {
   '列表滑动监听': (context) => new ScrollerListener(),
   '登陆校验': (context) => new LoginCheck(),
   '浮动弹出': (context) => new FloatUp(),
+  '三方登录': (context) => new ThirdPartLogin(),
 };
