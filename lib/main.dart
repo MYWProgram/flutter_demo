@@ -5,6 +5,8 @@ import 'package:flutter_demo/widget/scroller_listener.dart';
 import 'package:flutter_demo/widget/login_check.dart';
 import 'package:flutter_demo/widget/float_up/float_up.dart';
 import 'package:flutter_demo/widget/third_part_login.dart';
+import 'package:flutter_demo/widget/rect_path_animation.dart';
+import 'package:flutter_demo/widget/digital_clock.dart';
 
 void main() {
   runApp(MyApp());
@@ -83,4 +85,6 @@ Map<String, WidgetBuilder> router = {
   '登陆校验': (context) => new LoginCheck(),
   '浮动弹出': (context) => new FloatUp(),
   '三方登录': (context) => new ThirdPartLogin(),
+  '画布动画': (context) => new RectPathAnimation(),
+  '绘制时钟': (context) => new DigitalClock(),
 };
