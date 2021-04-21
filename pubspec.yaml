@@ -16,6 +16,8 @@ dependencies:
   flutter_screenutil: 5.0.0
   # 抖动动画组件
   shake_animation_widget: 2.1.2
+  # 黏贴卡片动画
+  slimy_card: ^1.0.4
 
 dev_dependencies:
   flutter_test:

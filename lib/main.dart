@@ -7,6 +7,7 @@ import 'package:flutter_demo/widget/float_up/float_up.dart';
 import 'package:flutter_demo/widget/third_part_login.dart';
 import 'package:flutter_demo/widget/rect_path_animation.dart';
 import 'package:flutter_demo/widget/digital_clock.dart';
+import 'package:flutter_demo/widget/slimy_card_animation.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       builder: () => MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.red,
         ),
         home: HomePage(
           title: 'Flutter Demo',
@@ -87,4 +88,5 @@ Map<String, WidgetBuilder> router = {
   '三方登录': (context) => new ThirdPartLogin(),
   '画布动画': (context) => new RectPathAnimation(),
   '绘制时钟': (context) => new DigitalClock(),
+  '黏贴卡片': (context) => new SlimyCardAnimation(),
 };
