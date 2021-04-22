@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import './dep_floating_button.dart';
+import 'dep_floating_button.dart';
 
-class FloatUp extends StatefulWidget {
+class FloatDrawer extends StatefulWidget {
   @override
-  _FloatUpState createState() => _FloatUpState();
+  _FloatDrawerState createState() => _FloatDrawerState();
 }
 
-class _FloatUpState extends State<FloatUp> {
+class _FloatDrawerState extends State<FloatDrawer> {
   List<Icon> iconList = [
     Icon(Icons.add),
     Icon(Icons.save_alt_outlined),
@@ -20,7 +20,7 @@ class _FloatUpState extends State<FloatUp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FloatUp'),
+        title: Text('FloatDrawer'),
         elevation: 0,
         backgroundColor: Colors.red,
       ),
