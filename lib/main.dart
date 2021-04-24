@@ -8,6 +8,7 @@ import 'package:flutter_demo/widget/third_part_login.dart';
 import 'package:flutter_demo/widget/rect_path_animation.dart';
 import 'package:flutter_demo/widget/digital_clock.dart';
 import 'package:flutter_demo/widget/slimy_card_animation.dart';
+import 'package:flutter_demo/widget/foldable_sidebar/foldable_sidebar.dart';
 
 void main() {
   runApp(MyApp());
@@ -89,4 +90,5 @@ Map<String, WidgetBuilder> router = {
   '画布动画': (context) => new RectPathAnimation(),
   '数字时钟': (context) => new DigitalClock(),
   '黏贴卡片': (context) => new SlimyCardAnimation(),
+  '折叠侧边栏': (context) => new FoldableSidebar(),
 };

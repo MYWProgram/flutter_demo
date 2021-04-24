@@ -18,6 +18,8 @@ dependencies:
   shake_animation_widget: 2.1.2
   # 黏贴卡片动画
   slimy_card: ^1.0.4
+  # 折叠侧边栏
+  foldable_sidebar: ^1.0.0
 
 dev_dependencies:
   flutter_test:
